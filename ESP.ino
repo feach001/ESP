@@ -95,10 +95,10 @@ void loop() {
     }
     if(RemoteXY.slider_rechts >= 0){
       analogWrite(rMotorPin1, 0);
-      analogWrite(rMotorPin2, RemoteXY.slider_rechts * 2.3);
+      analogWrite(rMotorPin2, RemoteXY.slider_rechts * 2.4);
     }
     else if(RemoteXY.slider_rechts < 0){
-      analogWrite(rMotorPin1, RemoteXY.slider_rechts * -2.3);
+      analogWrite(rMotorPin1, RemoteXY.slider_rechts * -2.4);
       analogWrite(rMotorPin2, 0);
     }
   }

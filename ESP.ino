@@ -84,7 +84,7 @@ void stopp()
 
 void loop() {
   RemoteXY_Handler();
-  if(RemoteXY.switch_2 == 0){                                             // Falls der Switch auf Phone ist
+  if(RemoteXY.switch_1 == 0){                                             // Falls der Switch auf Phone ist
     if(RemoteXY.slider_links >= 0){
       analogWrite(lMotorPin1, 0);
       analogWrite(lMotorPin2, RemoteXY.slider_links * 2);
@@ -102,9 +102,7 @@ void loop() {
       analogWrite(rMotorPin2, 0);
     }
   }
-  else if(RemoteXY.switch_2 == 1 and RemoteXY.pushSwitch_Engine == 1){  //Falls der Switch auf Sensor ist und der Button auf Go
-    Serial.println(analogRead(SensorL));
-    Serial.println(analogRead(SensorR));
+  else if(RemoteXY.switch_1 == 1 and RemoteXY.pushSwitch_Engine == 1){  //Falls der Switch auf Sensor ist und der Button auf Go
     //Falls beide Sensoren weiß erkennen, vorwärtsfahren
     if (analogRead(SensorR) <= SENSORGRENZE && analogRead(SensorL) <= SENSORGRENZE)
     {   

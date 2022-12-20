@@ -1,4 +1,0 @@
-# ESP
-Erstsemesterprojekt
-
-Gommemode
